@@ -1,0 +1,30 @@
+.img-container{
+    text-align: center;
+    margin: 0px 0 0px 0;
+
+}
+
+img.avatar{
+    width: 40%;
+    border-radius: 45%;
+    //margin-top: 20px;
+}
+.info-1 {
+    font-size: 14px;
+    //margin: 10px 0px 0px 45px !important;
+    color: #999;
+    font-family: Arial;
+}
+.info-1 span {
+    color: var(--ion-color-primary);
+}
+.header{
+    background-color: var(--ion-color-primary);
+    padding-top: 10px;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 27px;
+    border-radius: 49% / 22%;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+}

@@ -1,0 +1,91 @@
+ 
+
+<ion-content>
+   <div class="header" >
+   
+ </div>
+
+<ion-row>
+    <ion-col size-sm="6"  offset-sm="3">
+  
+      <div class="img-container">
+        <img src="../../assets/images/f3.jpeg" class="avatar">
+      </div>
+    </ion-col>
+  </ion-row>
+  
+  <form #loginForm="ngForm" (ngSubmit)="register()">
+    <ion-grid>
+      <ion-row>
+        <ion-col size-sm="6" offset-sm="3" >
+          <ion-list>
+            <ion-item>
+              <ion-label position="floating">Name <ion-text color="danger">*</ion-text></ion-label>
+              <ion-input 
+              required 
+              type="text" 
+              name="name" 
+              [(ngModel)]= form.name
+              ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Email <ion-text color="danger">*</ion-text></ion-label>
+              <ion-input 
+              required 
+              type="email" 
+              name="email" 
+              [(ngModel)]= form.email 
+              email
+              ></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label position="floating">Password <ion-text color="danger">*</ion-text></ion-label>
+              <ion-input 
+              required 
+              type="password" 
+              name="password" 
+              [(ngModel)]= form.password
+              minlength="8"
+              ></ion-input>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col size-sm="6" offset-sm="3">
+          <ion-button 
+          expand="full"  
+          (click)="loadActionSheet()"
+          color="primary" 
+          [disabled]="!loginForm.valid"
+          >
+            Choose a photo <ion-icon name="file"></ion-icon>
+          </ion-button>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+          <ion-col size-sm="6" offset-sm="3">
+          <ion-button 
+          expand="full" 
+          color="primary" 
+          type="submit" 
+          [disabled]="!loginForm.valid" 
+          >
+           Sign up &nbsp; <ion-icon name="person-add"></ion-icon>
+          </ion-button>
+          <p class="info-1" text-center>Already have account? <span (click)="onLogin()">Sign in</span> </p>
+          </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+
+  <div class="image_holder" #registerImage style="display: none;">
+
+    <img src="{{ form.image }}" id="user_image" style="width: 50px; height: 50px;">
+
+  </div>
+ 
+</ion-content>
+
+ 

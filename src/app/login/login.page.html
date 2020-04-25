@@ -1,0 +1,62 @@
+ 
+  <ion-content>
+   <div class="header" >
+   
+ </div>
+<ion-row>
+  <ion-col size-sm="6" offset-sm="3">
+    <div class="img-container">
+      <img src="../../assets/images/f3.jpeg" class="avatar">
+    </div>
+  </ion-col>
+</ion-row>
+
+<form #loginForm="ngForm" (ngSubmit)="login()">
+  <ion-grid>
+    <ion-row>
+      <ion-col size-sm="6" offset-sm="3">
+        <ion-list>
+          <ion-item>
+            <ion-label position="floating">Email <ion-text color="danger">*</ion-text></ion-label>
+            <ion-input 
+            required 
+            type="email" 
+            name="email" 
+            [(ngModel)]= form.email
+            email
+            ></ion-input>
+          </ion-item>
+          <ion-item>
+            <ion-label position="floating">Password <ion-text color="danger">*</ion-text></ion-label>
+            <ion-input 
+            required 
+            type="password" 
+            name="password" [(ngModel)]= form.password
+            minlength="8"
+            ></ion-input>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size-sm="6" offset-sm="3">
+        <ion-button 
+        expand="full"  
+        style="margin-top: 10px;"color="primary" 
+        type="submit" 
+        [disabled]="!loginForm.valid"
+        >
+          Login &nbsp; <ion-icon name="log-in"></ion-icon>
+        </ion-button>
+      <p class="info-1 ion-text-center" >Don't have an account? <span (click)="onRegister()">Sign up</span> </p>
+      </ion-col>
+    </ion-row>  
+  </ion-grid>
+</form>
+
+<div #loginImages style="display: none;">
+<img src="" id="login_image"/>
+<img src="" id="img_from_server"/>
+</div>
+
+ </ion-content>
