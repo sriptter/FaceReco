@@ -24,7 +24,7 @@ export class LoginPage implements OnInit {
   }
 
   login() {
-    console.log('Login clicked');
+    console.log('Login clicked!');
   }
   onSubmit() {
 
